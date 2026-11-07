@@ -67,12 +67,16 @@ The analysis uses the included synthetic dataset located at `data/transactions.c
 
 ### Run the SQL Analysis
 
-1. Create a PostgreSQL database named `banking_analytics`.
-2. Create the `transactions` table using the schema documented in the project's SQL files, or the dataset column definitions.
-3. Import `data/transactions.csv` into the table, ensuring that the CSV header option is enabled.
-4. Execute the SQL scripts in the `sql/` directory using pgAdmin.
+1. Install PostgreSQL and open pgAdmin.
+2. Create a database named `banking_analytics`.
+3. Open the Query Tool and execute `sql/00_create_transactions_table.sql` to create the transactions table.
+4. Import `data/transactions.csv` into the `transactions` table using pgAdmin's Import/Export Data feature. Select CSV as the format and enable the Header option.
+5. Execute the following SQL scripts:
+   - `sql/01_transaction_overview.sql`
+   - `sql/02_channel_failure_analysis.sql`
+   - `sql/03_duplicate_payment_analysis.sql`
 
-Run sql/00_create_transactions_table.sql in pgAdmin to create the transactions table.
+The queries calculate transaction failure metrics, compare payment channels, and investigate repeated payment references using SQL aggregations and window functions.
 
 ### Explore the Dashboard
 
@@ -124,6 +128,7 @@ This is a synthetic portfolio project. Its patterns are simulated and should not
 ## Repository Structure
 
 ```text
+
 banking-transaction-analytics/
 ├── data/
 │   └── transactions.csv
@@ -131,10 +136,13 @@ banking-transaction-analytics/
 │   ├── generate_transactions.py
 │   └── analyze_transactions.py
 ├── sql/
+│   ├── 00_create_transactions_table.sql
 │   ├── 01_transaction_overview.sql
 │   ├── 02_channel_failure_analysis.sql
 │   └── 03_duplicate_payment_analysis.sql
-└── README.md
+├── README.md
+└── requirements.txt
+
 ```
 
 ## Project Outcome
