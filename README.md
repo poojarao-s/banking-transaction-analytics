@@ -34,6 +34,50 @@ All data is simulated and does not contain real customer information or represen
 
 **Tableau:** Developed an interactive dashboard featuring KPI indicators, channel-level failure analysis, failure reasons, processing-time distributions, and repeated-reference monitoring.
 
+## How to Run the Project
+
+### Prerequisites
+
+- Python 3
+- PostgreSQL (for SQL analysis)
+- Tableau Public (for dashboard visualization)
+
+### Run the Python Analysis
+
+Clone the repository and navigate into the project directory:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/banking-transaction-analytics.git
+cd banking-transaction-analytics
+```
+
+Install the required Python dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the analysis:
+
+```bash
+python scripts/analyze_transactions.py
+```
+
+The analysis uses the included synthetic dataset located at `data/transactions.csv`.
+
+### Run the SQL Analysis
+
+1. Create a PostgreSQL database named `banking_analytics`.
+2. Create the `transactions` table using the schema documented in the project's SQL files, or the dataset column definitions.
+3. Import `data/transactions.csv` into the table, ensuring that the CSV header option is enabled.
+4. Execute the SQL scripts in the `sql/` directory using pgAdmin.
+
+### Explore the Dashboard
+
+[View the interactive Tableau dashboard](https://public.tableau.com/views/BankingTransactionReliabilityDashboard/BankingTransactionReliabilityDashboard)
+
+All transaction data is synthetically generated and intended solely for demonstration purposes.
+
 ## Key Findings
 
 | Metric | Result |
