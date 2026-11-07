@@ -72,6 +72,8 @@ The analysis uses the included synthetic dataset located at `data/transactions.c
 3. Import `data/transactions.csv` into the table, ensuring that the CSV header option is enabled.
 4. Execute the SQL scripts in the `sql/` directory using pgAdmin.
 
+Run sql/00_create_transactions_table.sql in pgAdmin to create the transactions table.
+
 ### Explore the Dashboard
 
 [View the interactive Tableau dashboard](https://public.tableau.com/views/BankingTransactionReliabilityDashboard/BankingTransactionReliabilityDashboard)
