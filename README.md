@@ -47,7 +47,7 @@ All data is simulated and does not contain real customer information or represen
 Clone the repository and navigate into the project directory:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/banking-transaction-analytics.git
+git clone https://github.com/poojarao-s/banking-transaction-analytics.git
 cd banking-transaction-analytics
 ```
 
